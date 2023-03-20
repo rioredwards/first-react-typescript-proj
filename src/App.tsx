@@ -16,12 +16,12 @@ function App() {
   return (
     <div className="app">
       <h1>React with Typescript</h1>
-      {/* <Parent /> */}
-      {/* <EventComponent /> */}
-      {/* <GuestList /> */}
+      <Parent />
+      <EventComponent />
+      <GuestList />
       <UserSearchRef mockUsers={mockUsers} />
-      {/* <UserSearchFC mockUsers={mockUsers} /> */}
-      {/* <UserSearchClass mockUsers={mockUsers} /> */}
+      <UserSearchFC mockUsers={mockUsers} />
+      <UserSearchClass mockUsers={mockUsers} />
     </div>
   );
 }
