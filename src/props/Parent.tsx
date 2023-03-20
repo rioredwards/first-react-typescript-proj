@@ -1,6 +1,13 @@
 import { Child } from "./Child";
 
 const Parent = () => {
-  return <Child color="Red" />;
+  function onClick() {
+    console.log("Clicked!");
+  }
+  return (
+    <Child color="Red" onClick={onClick}>
+      <div>I am a child prop!</div>
+    </Child>
+  );
 };
 export default Parent;
