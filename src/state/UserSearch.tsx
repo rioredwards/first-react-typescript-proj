@@ -5,13 +5,11 @@ interface User {
   age: number;
 }
 
-const mockUsers = [
-  { name: "Sarah", age: 20 },
-  { name: "Alex", age: 20 },
-  { name: "Michael", age: 20 },
-];
+interface UserSearchProps {
+  mockUsers: User[];
+}
 
-const UserSearch: React.FC = () => {
+const UserSearch: React.FC<UserSearchProps> = ({ mockUsers }) => {
   const [name, setName] = useState("");
   const [users, setUsers] = useState<User[]>([...mockUsers]);
 
@@ -20,14 +18,13 @@ const UserSearch: React.FC = () => {
     const foundUsers = mockUsers.filter((user) => {
       return user.name.toLowerCase().includes(name.toLowerCase());
     });
-    console.log(foundUsers);
 
     setUsers(foundUsers);
   };
 
   return (
     <div>
-      <h3>User Search</h3>
+      <h3>User Search Functional Component</h3>
       <form onSubmit={(e) => onSearchUser(e)}>
         <input value={name} onChange={(e) => setName(e.target.value)} />
         <button>Search</button>
