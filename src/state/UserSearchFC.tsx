@@ -9,7 +9,7 @@ interface UserSearchProps {
   mockUsers: User[];
 }
 
-const UserSearch: React.FC<UserSearchProps> = ({ mockUsers }) => {
+const UserSearchFC: React.FC<UserSearchProps> = ({ mockUsers }) => {
   const [name, setName] = useState("");
   const [users, setUsers] = useState<User[]>([...mockUsers]);
 
@@ -43,4 +43,4 @@ const UserSearch: React.FC<UserSearchProps> = ({ mockUsers }) => {
   );
 };
 
-export default UserSearch;
+export default UserSearchFC;
